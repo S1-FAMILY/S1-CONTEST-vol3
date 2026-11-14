@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>S1 CONTEST 2026 | Ставрополь</title>
+    <meta name="theme-color" content="#02050a">
+    <meta name="description" content="S1 CONTEST 2026 — танцевальный контест и мастер-классы в Ставрополе, 23–24 мая 2026.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23bcdff6' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M12 2v20M4 7l16 10M4 17L20 7'/%3E%3C/svg%3E">
+    <link rel="preload" as="image" href="img/ice-wide.jpg" media="(min-aspect-ratio: 1/1)">
+    <link rel="preload" as="image" href="img/ice-tall.jpg" media="(max-aspect-ratio: 1/1)">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Фон: аврора, ледяная рамка, снегопад -->
+<div class="aurora" aria-hidden="true"></div>
+<div class="ice-frame" aria-hidden="true"><div class="ice-img"></div></div>
+<canvas id="snow-back" aria-hidden="true"></canvas>
+<canvas id="snow-front" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="iceText" x="-4%" y="-12%" width="108%" height="124%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.7" result="b"/>
+      <feSpecularLighting in="b" surfaceScale="5" specularConstant=".6" specularExponent="26" lighting-color="#ffffff" result="s">
+        <feDistantLight azimuth="235" elevation="52"/>
+      </feSpecularLighting>
+      <feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/>
+      <feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k1="0" k2="1" k3=".6" k4="0"/>
+    </filter>
+    <linearGradient id="snowGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2faff" stop-opacity=".96"/>
+      <stop offset=".16" stop-color="#c9e4f7" stop-opacity=".72"/>
+      <stop offset=".55" stop-color="#5b8fbb" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#0a182a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="iceHeart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".5" stop-color="#b9d8ee"/>
+      <stop offset="1" stop-color="#6f9ec0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">S1 CONTEST 2026</div>
+            <button class="mobile-menu-toggle" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="#about">О событии</a>
+                <a href="#categories">Категории</a>
+                <a href="#registration">Регистрация</a>
+                <a href="#rules">Критерии</a>
+                <a href="#masters">Мастер-классы</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <a class="dev-credit" href="https://t.me/se_va15" target="_blank" rel="noopener" title="Разработчик сайта"><span>Разработчик</span><b>Андреев Всеволод</b></a>
+        </div>
+    </div>
+</header>
+<div class="mobile-menu-overlay"></div>
+
+<section class="hero" id="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-logo"><img src="img/logo-s1-contest.webp" alt="S1 CONTEST 2026" width="2520" height="634"></h1>
+            <div class="hero-date">23 – 24</div>
+            <div class="hero-month">мая 2026</div>
+            <div class="hero-place">Ставрополь</div>
+            <div class="hero-line"></div>
+            <div class="hero-sub">Contest<br>Workshops</div>
+            <div class="btn-group">
+                <a href="#registration" class="btn">РЕГИСТРАЦИЯ</a>
+                <a href="polojenie_2026.pdf" class="btn ghost" target="_blank">ПОЛОЖЕНИЕ</a>
+            </div>
+        </div>
+    </div>
+    <div class="drift" aria-hidden="true">
+        <svg class="d-back" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0 70 C84 50 168 33 240 50 C324 55 408 75 480 78 C564 68 648 21 720 33 C804 77 888 28 960 50 C1044 46 1128 66 1200 96 C1284 26 1368 41 1440 70 V160 H0 Z" fill="url(#snowGrad)"/></svg>
+        <svg class="d-front" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0 95 C84 80 168 59 240 92 C324 77 408 72 480 93 C564 78 648 53 720 76 C804 58 888 102 960 113 C1044 92 1128 45 1200 70 C1284 55 1368 60 1440 95 V160 H0 Z" fill="url(#snowGrad)"/></svg>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="section-title">О МЕРОПРИЯТИИ</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Приглашаем Вас принять участие в танцевальном мероприятии S1 CONTEST. Это уникальная возможность продемонстрировать свой талант и встретиться с единомышленниками. Присоединяйся к танцевальному движению!</p>
+                <div class="info-card"><h3>ДАТЫ</h3><p>23 мая 2026 — МАСТЕР-КЛАССЫ</p><p>24 мая 2026 — CONTEST</p></div>
+                <div class="info-card"><h3>МЕСТО</h3><p>23 мая 2026 г. - г. Ставрополь, ул. Перспективная, 1 Г</p><p>24 мая 2026 г. - г. Ставрополь, ул. Кулакова, 2, корпус 9</p></div>
+                <div class="info-card"><h3>СЦЕНА</h3><p>10x8 метров, профессиональный линолеум</p><p class="warning">Запрещён реквизит, который приводит к загрязнению, повреждению сцены</p></div>
+            </div>
+            <div class="about-details">
+                <div class="detail-item"><h3>ДЕДЛАЙН</h3><p>Регистрация до 15 мая 2026</p></div>
+                <div class="detail-item"><h3>МУЗЫКА</h3><p>До 15 мая на почту s1contest.music@yandex.ru</p></div>
+                <div class="detail-item"><h3>ВОЗРАСТ</h3><p>Kids / Juniors / Adults</p></div>
+                <div class="detail-item"><h3>НОМИНАЦИИ</h3><p>Solo, Duet, Crew, Lady's</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="categories" id="categories">
+    <div class="container">
+        <h2 class="section-title">НОМИНАЦИИ И КАТЕГОРИИ</h2>
+        <div class="categories-grid">
+            <div class="category-card"><h3>SHOW</h3><ul><li><strong>Kids SOLO</strong> – до 12 лет (включительно) (beg/pro)</li><li><strong>Juniors SOLO</strong> – 13-17 лет (beg/pro)</li><li><strong>Adults SOLO</strong> – от 18 лет (beg/pro)</li><li><strong>DUET</strong> – без возрастных ограничений</li></ul></div>
+            <div class="category-card"><h3>КОМАНДЫ (CREW)</h3><ul><li><strong>Kids Crew</strong> – до 12 лет (включительно) (beg/pro)</li><li><strong>Juniors Crew</strong> – 13-17 лет (beg/pro)</li><li><strong>Adults Crew</strong> – без возрастных ограничений (beg/pro)</li><li><strong>Количество участников: от 5 человек</strong></li></ul></div>
+            <div class="category-card"><h3>LADY'S (от 16 лет)</h3><ul><li><strong>Solo Lady's (beg/pro)</strong></li><li><strong>Lady's Crew (команда)</strong></li></ul></div>
+        </div>
+        <div class="warning-box"><h3>ВАЖНО</h3><p>Регистрация считается завершённой только после оплаты взноса за участие. Количество участников ограничено! Дедлайн заявок — 15 мая 2026.</p></div>
+    </div>
+</section>
+
+<section class="registration" id="registration">
+    <div class="container">
+        <h2 class="section-title">РЕГИСТРАЦИЯ И СТОИМОСТЬ</h2>
+        <div class="fees-table-container"><h3>ТАРИФЫ УЧАСТИЯ</h3><div class="table-wrapper"><table class="fees-table"><thead><tr><th>НОМИНАЦИЯ</th><th>До 20 апреля</th><th>С 21 апреля</th></tr></thead><tbody><tr><td><strong>SOLO</strong></td><td>1 800 ₽</td><td>2 200 ₽</td></tr>
+<tr><td><strong>DUET</strong></td><td>1 600 ₽ (с чел.)</td><td>1 900 ₽ (с чел.)</td></tr>
+<tr><td><strong>CREW / LADY'S CREW</strong></td><td>1 500 ₽ (с чел.)</td><td>1 700 ₽ (с чел.)</td></tr>
+</tbody>
+</table></div><p class="note" style="margin-top:12px">Танцоры, принимающие участие в нескольких номинациях, оплачивают взносы за каждое выступление.</p></div>
+        <div class="registration-info"><div class="info-box"><h3>ОПЛАТА</h3><p>Оплата до 15 мая. Возврат средств возможен только при отмене мероприятия.</p></div><div class="info-box"><h3>МУЗЫКА</h3><p>Формат MP3, отправить на s1contest.music@yandex.ru. Тема письма: ФИ/Дуэт/Команда_ФИ руководителя_телефон.</p></div></div>
+        <div class="registration-grid">
+            <div class="reg-card"><div class="card-content"><h3>SOLO</h3><div class="price-main">1 800 / 2 200 ₽</div><p>до 20.04 / с 21.04</p></div><a href="https://docs.google.com/forms/d/1V3Zy7zS764VDYzDdfJABsnXPuL4GxMQ-5yYGW8petq8/edit" class="btn" target="_blank">ЗАЯВКА SOLO</a></div>
+            <div class="reg-card"><div class="card-content"><h3>DUET</h3><div class="price-main">1 600 / 1 900 ₽</div><p>с участника</p></div><a href="https://docs.google.com/forms/d/e/1FAIpQLSfK3BLvG2kEUVoic9XDj6xqqNQbLlYinyiDYOvpTfka6N87LA/viewform?usp=publish-editor" class="btn" target="_blank">ЗАЯВКА DUET</a></div>
+            <div class="reg-card"><div class="card-content"><h3>CREW</h3><div class="price-main">1 500 / 1 700 ₽</div><p>с человека</p></div><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_ZhA-eDv8bmaqMBQp81iZ2MbyNEunoEZSzj0PSIDN6I_oYQ/viewform?usp=publish-editor" class="btn" target="_blank">ЗАЯВКА CREW</a></div>
+        </div>
+        <div class="ticket-card">
+            <h3>ЗРИТЕЛЬСКИЕ БИЛЕТЫ</h3>
+            <div class="ticket-prices">
+                <div class="ticket-price-item"><span class="ticket-price">700 ₽</span><span class="ticket-label">Предпродажа</span></div>
+                <div class="ticket-price-item"><span class="ticket-price">1 000 ₽</span><span class="ticket-label">В день соревнований (24 мая)</span></div>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScZxvj0MYnahHa0y36I2aHw2Qiq2rdI_L55JJMGK9VO98lXQw/viewform?usp=dialog" class="btn" target="_blank">КУПИТЬ БИЛЕТ</a>
+        </div>
+    </div>
+</section>
+
+<section class="rules" id="rules">
+    <div class="container">
+        <h2 class="section-title">КРИТЕРИИ ОЦЕНКИ</h2>
+        <div class="criteria-box"><div class="criteria-list"><div class="criterion"><h4>ХОРЕОГРАФИЯ – 40%</h4><p>Оригинальность, раскрытие трека</p></div><div class="criterion"><h4>ТЕХНИКА – 30%</h4><p>Чистота, база, контроль</p></div><div class="criterion"><h4>ПОДАЧА / ПРЕЗЕНТАЦИЯ – 20%</h4><p>Энергия, харизма, взаимодействие со зрителем</p></div><div class="criterion"><h4>КРЕАТИВНОСТЬ – 10%</h4><p>Нестандартные решения, оригинальность</p></div></div></div>
+        <div class="rules-list"><div class="rules-item"><h3>УРОВНИ УЧАСТНИКОВ</h3><p><strong>BEGINNER</strong> — танцоры начинающего и среднего уровня, занимающиеся от 0 до 2 лет.<br><strong>PRO</strong> — профессиональные танцоры, которые занимаются более 2-3 лет.</p></div><div class="rules-item"><h3>ТАЙМИНГ ВЫСТУПЛЕНИЙ</h3><p>Solo (Kids, Juniors, Lady's) — до 1:30<br>Solo Adults — до 2:00<br>Duet — до 2:00<br>Crew — до 4:00</p></div><div class="rules-item"><h3>ТРЕБОВАНИЯ К МУЗЫКЕ</h3><p>Формат MP3. Запрещается использование ненормативной лексики в номинациях Kids и Juniors на любом языке. Во всех номинациях запрещена ненормативная лексика на русском языке и любая пропаганда, запрещенная на территории РФ.</p></div></div>
+    </div>
+</section>
+
+<!-- МАСТЕР-КЛАССЫ (ОБНОВЛЕННЫЙ БЛОК) -->
+<section class="masters" id="masters">
+    <div class="container">
+        <h2 class="section-title">МАСТЕР-КЛАССЫ | 23 МАЯ 2026</h2>
+        <div class="masters-intro">
+            <i class="fas fa-star"></i> 
+            23 мая в рамках нашего контеста пройдут мастер-классы от приглашенных топ-танцоров нашей страны!
+        </div>
+
+        <div class="masters-grid">
+            <!-- Диана Горбункова -->
+            <div class="master-card">
+                <div class="master-img">
+                    <img src="img/master-gorbunkova.jpg" alt="Диана Горбункова" loading="lazy">
+                </div>
+                <div class="master-info">
+                    <h3>ДИАНА ГОРБУНКОВА</h3>
+                    <span class="master-style">HIP-HOP</span>
+                    <div class="master-time"><i class="far fa-clock"></i> 13:00</div>
+                    <p>Мощный грув, четкая техника и энергия — заряжаемся от топового хореографа.</p>
+                </div>
+            </div>
+            <!-- Амир Низамов -->
+            <div class="master-card">
+                <div class="master-img">
+                    <img src="img/master-nizamov.jpg" alt="Амир Низамов" loading="lazy">
+                </div>
+                <div class="master-info">
+                    <h3>АМИР НИЗАМОВ</h3>
+                    <span class="master-style">HIP-HOP</span>
+                    <div class="master-time"><i class="far fa-clock"></i> 15:00</div>
+                    <p>Уличная культура, фишки и неподражаемый стиль от одного из лучших хип-хоперов страны.</p>
+                </div>
+            </div>
+            <!-- Соня Мисник -->
+            <div class="master-card">
+                <div class="master-img">
+                    <img src="img/master-misnik.jpg" alt="Соня Мисник" loading="lazy">
+                </div>
+                <div class="master-info">
+                    <h3>СОНЯ МИСНИК</h3>
+                    <span class="master-style">АВТОРСКОЕ ХОРЕО</span>
+                    <div class="master-time"><i class="far fa-clock"></i> 17:00</div>
+                    <p>Эмоциональная подача, пластика и уникальный почерк. Класс для души и тела.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing-master">
+            <h3>СТОИМОСТЬ УЧАСТИЯ</h3>
+            <div class="price-row">
+                <span class="price-label"><strong>Full pass (3 класса)</strong> <span class="repost-badge">С репостом</span></span>
+                <span class="price-value">До 01.05: 5 900 ₽</span>
+                <span class="price-value">С 02.05: 6 900 ₽</span>
+            </div>
+            <div class="price-row">
+                <span class="price-label"><strong>Full pass (3 класса)</strong> <span class="repost-badge">Без репоста</span></span>
+                <span class="price-value">До 01.05: 6 100 ₽</span>
+                <span class="price-value">С 02.05: 7 100 ₽</span>
+            </div>
+            <div class="price-row">
+                <span class="price-label"><strong>1 класс</strong> <span class="repost-badge">С репостом</span></span>
+                <span class="price-value">До 01.05: 2 800 ₽</span>
+                <span class="price-value">С 02.05: 3 300 ₽</span>
+            </div>
+            <div class="price-row">
+                <span class="price-label"><strong>1 класс</strong> <span class="repost-badge">Без репоста</span></span>
+                <span class="price-value">До 01.05: 3 100 ₽</span>
+                <span class="price-value">С 02.05: 3 600 ₽</span>
+            </div>
+        </div>
+
+        <div class="booking-terms">
+            <i class="fas fa-calendar-check"></i>
+            <strong style="font-size: 1.2rem;">Место можно забронировать:</strong>
+            <ul style="margin: 16px 0 12px 24px;">
+                <li>При 100% оплате</li>
+                <li>При 50% предоплате — остаток необходимо внести не позднее 10 мая!</li>
+            </ul>
+            <p><i class="fas fa-exclamation-circle"></i> Оплата за класс возвращается только при отмене мероприятия, но свое место можно всегда подарить или перепродать.</p>
+            <div style="margin-top: 20px;">
+                <span class="limited-places"><i class="fas fa-heart"></i> МЕСТА ОГРАНИЧЕНЫ</span>
+            </div>
+            <div style="margin-top: 22px;">
+                <a href="tel:+79624542221" class="phone-big"><i class="fas fa-phone-alt"></i> +7 (962) 454-22-21</a>
+                <p style="margin-top: 8px;">Запись по телефону или в Telegram</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts" id="contacts">
+    <div class="container">
+        <h2 class="section-title">КОНТАКТЫ</h2>
+        <div class="contacts-grid">
+            <a href="https://t.me/s1_contest" target="_blank" class="contact-item"><i class="fab fa-telegram"></i><h3>TELEGRAM КАНАЛ</h3><p>@s1_contest</p></a>
+            <a href="https://t.me/s1family_stavropol" target="_blank" class="contact-item"><i class="fas fa-phone-alt"></i><h3>ТЕЛЕФОН</h3><p>+7 (962) 454-22-21</p></a>
+            <a href="mailto:s1contest.stav@gmail.com" class="contact-item"><i class="fas fa-envelope"></i><h3>E-MAIL</h3><p>s1contest.stav@gmail.com</p></a>
+            <a href="mailto:s1contest.music@yandex.ru" class="contact-item"><i class="fas fa-music"></i><h3>ПОЧТА ДЛЯ МУЗЫКИ</h3><p>s1contest.music@yandex.ru</p></a>
+            <a href="https://www.instagram.com/s1family_contest" target="_blank" class="contact-item"><i class="fab fa-instagram"></i><h3>INSTAGRAM</h3><p>@s1family_contest</p></a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="drift" aria-hidden="true">
+        <svg class="d-back" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0 70 C84 50 168 33 240 50 C324 55 408 75 480 78 C564 68 648 21 720 33 C804 77 888 28 960 50 C1044 46 1128 66 1200 96 C1284 26 1368 41 1440 70 V160 H0 Z" fill="url(#snowGrad)"/></svg>
+        <svg class="d-front" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0 95 C84 80 168 59 240 92 C324 77 408 72 480 93 C564 78 648 53 720 76 C804 58 888 102 960 113 C1044 92 1128 45 1200 70 C1284 55 1368 60 1440 95 V160 H0 Z" fill="url(#snowGrad)"/></svg>
+    </div>
+    <div class="container">
+        <h3>S1 CONTEST 2026</h3>
+        <div class="social-links">
+            <a href="https://instagram.com/s1family_contest" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/s1_contest" target="_blank" class="social-link"><i class="fab fa-telegram"></i></a>
+        </div>
+        <p class="copyright">Разработчик сайта: Андреев Всеволод (тг: @se_va15)</p>
+        <p class="copyright">© 2026 S1 CONTEST — Ставрополь. Все права защищены. 23–24 мая 2026</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
