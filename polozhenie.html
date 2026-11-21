@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Положение | S1 CONTEST 2027</title>
+    <meta name="theme-color" content="#02050a">
+    <meta name="description" content="S1 CONTEST 2027 — танцевальный контест и мастер-классы в Ставрополе, 23–24 января 2027.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23bcdff6' stroke-width='1.6' stroke-linecap='round'%3E%3Cpath d='M12 2v20M4 7l16 10M4 17L20 7'/%3E%3C/svg%3E">
+    <link rel="preload" as="image" href="img/ice-wide.jpg" media="(min-aspect-ratio: 1/1)">
+    <link rel="preload" as="image" href="img/ice-tall.jpg" media="(max-aspect-ratio: 1/1)">
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="orders.css">
+<style>
+.pol-lead{text-align:center;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-size:.9rem;line-height:1.8;margin:-6px 0 22px}
+.pol-toc{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:10px}
+.pol-toc a{padding:8px 16px;border:1px solid var(--line);border-radius:999px;color:var(--text);text-decoration:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(16,34,54,.55)}
+.pol-toc a:hover{border-color:var(--ice-2);color:#fff}
+.pol-page .pol-h{font-size:clamp(1.5rem,4vw,2.3rem);margin-top:64px;scroll-margin-top:90px}
+.pol-page .categories-grid,.pol-page .info-box,.pol-page .warning-box,.pol-page .fees-table-container,.pol-page .criteria-box{margin-left:auto;margin-right:auto}
+.pol-list{margin:0 0 0 20px;line-height:1.7}
+.pol-pdf{text-align:center;margin-top:44px}
+</style></head>
+<body>
+
+<!-- Фон: аврора, ледяная рамка, снегопад -->
+<div class="aurora" aria-hidden="true"></div>
+<div class="ice-frame" aria-hidden="true"><div class="ice-img"></div></div>
+<canvas id="snow-back" aria-hidden="true"></canvas>
+<canvas id="snow-front" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="iceText" x="-4%" y="-12%" width="108%" height="124%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.7" result="b"/>
+      <feSpecularLighting in="b" surfaceScale="5" specularConstant=".6" specularExponent="26" lighting-color="#ffffff" result="s">
+        <feDistantLight azimuth="235" elevation="52"/>
+      </feSpecularLighting>
+      <feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/>
+      <feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k1="0" k2="1" k3=".6" k4="0"/>
+    </filter>
+    <linearGradient id="snowGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2faff" stop-opacity=".96"/>
+      <stop offset=".16" stop-color="#c9e4f7" stop-opacity=".72"/>
+      <stop offset=".55" stop-color="#5b8fbb" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#0a182a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="iceHeart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".5" stop-color="#b9d8ee"/>
+      <stop offset="1" stop-color="#6f9ec0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header>
+    <div class="container">
+        <div class="header-content">
+            <a class="logo" href="index.html" style="text-decoration:none">S1 CONTEST 2027</a>
+            
+            
+            <a class="dev-credit" href="https://t.me/se_va09" target="_blank" rel="noopener" title="Разработчик сайта"><span>Разработчик</span><b>Андреев Всеволод</b></a>
+        </div>
+    </div>
+</header>
+
+<section class="page-sec pol-page"><div class="container">
+  <h1 class="section-title">ПОЛОЖЕНИЕ</h1>
+  <p class="pol-lead">S1 CONTEST · WORKSHOPS / CONTEST<br>23–24 января 2027 · г. Ставрополь</p>
+  <div class="pol-toc">
+    <a href="#nom">Номинации</a><a href="#age">Возраст</a><a href="#reg">Регистрация</a><a href="#fee">Взносы</a><a href="#crit">Критерии</a><a href="#music">Музыка</a><a href="#stage">Сцена</a><a href="#ws">Мастер-классы</a><a href="#cont">Контакты</a>
+  </div>
+
+  <h2 class="section-title pol-h" id="nom">НОМИНАЦИИ</h2>
+  <div class="categories-grid">
+    <div class="category-card"><h3>SHOW</h3><ul><li><strong>Solo Kids</strong> (Beginners / Pro)</li><li><strong>Solo Juniors</strong> (Beginners / Pro)</li><li><strong>Solo Adults</strong> (Beginners / Pro)</li><li><strong>Duet</strong></li><li><strong>Kids Crew</strong> (Beginners / Pro)</li><li><strong>Juniors Crew</strong> (Beginners / Pro)</li><li><strong>Adults Crew</strong> (Beginners / Pro)</li></ul></div>
+    <div class="category-card"><h3>LADY'S</h3><ul><li><strong>Solo</strong> (Beginners)</li><li><strong>Solo</strong> (Pro)</li><li><strong>Crew</strong></li></ul></div>
+  </div>
+
+  <h2 class="section-title pol-h" id="age">ВОЗРАСТНЫЕ КАТЕГОРИИ</h2>
+  <div class="categories-grid">
+    <div class="category-card"><h3>SHOW</h3><ul><li><strong>Kids</strong> — до 12 лет включительно</li><li><strong>Juniors</strong> — 13–17 лет включительно</li><li><strong>Adults</strong> — от 18 лет включительно</li></ul></div>
+    <div class="category-card"><h3>БЕЗ ОГРАНИЧЕНИЙ</h3><ul><li><strong>Crew Beginners / Pro</strong> и <strong>Duet</strong> — без возрастных ограничений</li></ul></div>
+    <div class="category-card"><h3>LADY'S</h3><ul><li>от 16 лет</li></ul></div>
+  </div>
+  <div class="categories-grid" style="margin-top:20px">
+    <div class="info-box"><h3>УРОВНИ</h3><p><strong>BEGINNERS</strong> — танцоры начального и среднего уровня, занимающиеся до 2 лет.<br><strong>PRO</strong> — профессиональные танцоры, занимающиеся более 2–3 лет.</p></div>
+    <div class="info-box"><h3>СОСТАВ</h3><p><strong>SOLO</strong> — 1 участник · <strong>DUET</strong> — 2 участника · <strong>CREW</strong> — от 5 участников.</p></div>
+  </div>
+  <div class="warning-box"><h3>20% ИЗ СОСЕДНЕЙ КАТЕГОРИИ</h3><p>В каждой категории допускается 20% участников из соседней возрастной категории.</p></div>
+
+  <h2 class="section-title pol-h" id="reg">РЕГИСТРАЦИЯ</h2>
+  <div class="info-box"><ul class="pol-list"><li>Регистрация во всех номинациях — <strong>до 10 января включительно</strong>. После 10 января заявки не принимаются.</li><li>Количество участников ограничено. Если лимит набран, регистрация закрывается раньше срока; поздние заявки попадают в «лист ожидания».</li></ul></div>
+  <div class="warning-box"><h3>ВНИМАНИЕ</h3><p>Регистрация считается завершённой только после оплаты взноса.</p></div>
+
+  <h2 class="section-title pol-h" id="fee">ВЗНОСЫ</h2>
+  <div class="fees-table-container"><div class="table-wrapper"><table class="fees-table"><thead><tr><th>НОМИНАЦИЯ</th><th>До 31.12.2026 (включительно)</th><th>С 01.01.2027</th></tr></thead><tbody><tr><td><strong>SOLO</strong></td><td>2 000 ₽</td><td>2 400 ₽</td></tr><tr><td><strong>DUET</strong></td><td>1 800 ₽ (с человека)</td><td>2 100 ₽ (с человека)</td></tr><tr><td><strong>CREW</strong></td><td>1 700 ₽ (с человека)</td><td>1 900 ₽ (с человека)</td></tr></tbody></table></div></div>
+  <div class="info-box" style="margin-top:20px"><ul class="pol-list"><li>Несколько номинаций или разные номера в одной номинации — взнос оплачивается за каждое выступление.</li><li>Взносы необходимо оплатить <strong>до 17 января включительно</strong>.</li><li>Возврат взноса — только при отмене мероприятия. При форс-мажоре напишите организаторам.</li></ul></div>
+
+  <h2 class="section-title pol-h" id="crit">КРИТЕРИИ ОЦЕНКИ</h2>
+  <div class="criteria-box"><div class="criteria-list"><div class="criterion"><h4>ХОРЕОГРАФИЯ – 50%</h4></div><div class="criterion"><h4>ТЕХНИКА – 30%</h4></div><div class="criterion"><h4>ПОДАЧА / ПРЕЗЕНТАЦИЯ – 20%</h4></div><div class="criterion"><h4>КРЕАТИВНОСТЬ – 10%</h4></div></div></div>
+
+  <h2 class="section-title pol-h" id="music">МУЗЫКА И ТАЙМИНГ</h2>
+  <div class="categories-grid">
+    <div class="category-card"><h3>ТАЙМИНГ</h3><ul><li><strong>SOLO</strong> (Kids, Juniors, Lady's) — до 1:30</li><li><strong>SOLO Adult</strong> — до 2:00</li><li><strong>DUET</strong> — до 2:00</li><li><strong>CREW</strong> — до 4:00</li></ul></div>
+    <div class="category-card"><h3>СДАЧА МУЗЫКИ</h3><ul><li>Срок — <strong>до 14 декабря включительно</strong></li><li>Почта: <strong>s1contest.music@yandex.ru</strong></li><li>Формат MP3; иметь с собой на USB-флешке</li></ul></div>
+  </div>
+  <div class="info-box" style="margin-top:20px"><h3>ОФОРМЛЕНИЕ ПИСЬМА</h3><p><strong>Тема письма:</strong> Ф.И. / ДУЭТ / КОМАНДА _ ФИ руководителя/хореографа _ контактный телефон.</p><p><strong>Название файла:</strong> Ф.И. / ДУЭТ / КОМАНДА – ВОЗРАСТНОЕ ПОДРАЗДЕЛЕНИЕ – НОМИНАЦИЯ – С ТОЧКИ / ИЗ-ЗА КУЛИС.</p></div>
+  <div class="warning-box"><h3>ЗАПРЕЩЕНО</h3><p>Ненормативная лексика: в KIDS и JUNIORS — на любом языке, во всех номинациях — на русском. Также запрещена любая пропаганда, запрещённая на территории РФ.</p></div>
+
+  <h2 class="section-title pol-h" id="stage">СЦЕНА</h2>
+  <div class="info-box"><p><strong>Место:</strong> г. Ставрополь, ул. Кулакова, 2, корпус 9.<br><strong>Покрытие:</strong> профессиональный линолеум.</p><p class="warning">Запрещён реквизит, который загрязняет, повреждает или намачивает поверхность.</p></div>
+
+  <h2 class="section-title pol-h" id="ws">МАСТЕР-КЛАССЫ</h2>
+  <div class="info-box"><p><strong>Дата:</strong> 20 декабря 2026 · <strong>Место:</strong> г. Ставрополь, ул. Перспективная, 1 Г</p><p><strong>15:00</strong> ALINYCHU — HIP-HOP<br><strong>17:00</strong> EGOR GUFRANOV — HIP-HOP</p></div>
+  <div class="fees-table-container" style="margin-top:20px"><div class="table-wrapper"><table class="fees-table"><thead><tr><th></th><th>До 01.12 включительно</th><th>С 02.12</th></tr></thead><tbody><tr><td><strong>Full pass — с репостом</strong></td><td>5 300 ₽</td><td>5 800 ₽</td></tr><tr><td><strong>Full pass — без репоста</strong></td><td>5 500 ₽</td><td>6 000 ₽</td></tr><tr><td><strong>1 class — с репостом</strong></td><td>2 800 ₽</td><td>3 300 ₽</td></tr><tr><td><strong>1 class — без репоста</strong></td><td>3 100 ₽</td><td>3 600 ₽</td></tr></tbody></table></div></div>
+  <div class="info-box" style="margin-top:20px"><ul class="pol-list"><li>Место бронируется при 100% оплате или при 50% предоплате; остаток — не позднее 5 декабря.</li><li>Оплата за класс возвращается только при отмене мероприятия, но своё место можно подарить или перепродать.</li></ul></div>
+  
+
+  <h2 class="section-title pol-h" id="cont">КОНТАКТЫ</h2>
+  <div class="contacts-grid">
+    <a href="https://t.me/s1_contest" target="_blank" class="contact-item"><i class="fab fa-telegram"></i><h3>TELEGRAM КАНАЛ</h3><p>s1_contest</p></a>
+    <a href="tel:+79624542221" class="contact-item"><i class="fas fa-phone-alt"></i><h3>ТЕЛЕФОН</h3><p>+7 962-454-22-21</p></a>
+    <a href="mailto:s1.contest.stav@gmail.com" class="contact-item"><i class="fas fa-envelope"></i><h3>E-MAIL</h3><p>s1.contest.stav@gmail.com</p></a>
+    <a href="mailto:s1contest.music@yandex.ru" class="contact-item"><i class="fas fa-music"></i><h3>ПОЧТА ДЛЯ МУЗЫКИ</h3><p>s1contest.music@yandex.ru</p></a>
+    <div class="contact-item"><i class="fab fa-instagram"></i><h3>НЕЛЬЗЯГРАММ*</h3><p>s1family_contest</p></div>
+  </div>
+  <div class="pol-pdf"><a href="polojenie.pdf" class="btn ghost" target="_blank">СКАЧАТЬ ПОЛОЖЕНИЕ (PDF)</a></div>
+</div></section>
+<footer>
+    <div class="drift" aria-hidden="true">
+        <svg class="d-back" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0 70 C84 50 168 33 240 50 C324 55 408 75 480 78 C564 68 648 21 720 33 C804 77 888 28 960 50 C1044 46 1128 66 1200 96 C1284 26 1368 41 1440 70 V160 H0 Z" fill="url(#snowGrad)"/></svg>
+        <svg class="d-front" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0 95 C84 80 168 59 240 92 C324 77 408 72 480 93 C564 78 648 53 720 76 C804 58 888 102 960 113 C1044 92 1128 45 1200 70 C1284 55 1368 60 1440 95 V160 H0 Z" fill="url(#snowGrad)"/></svg>
+    </div>
+    <div class="container">
+        <h3>S1 CONTEST 2027</h3>
+        <p class="copyright">Разработчик сайта: Андреев Всеволод (тг: <a href="https://t.me/se_va09" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">@se_va09</a>)</p>
+        <p class="copyright">© 2027 S1 CONTEST — Ставрополь. Все права защищены. 23–24 января 2027</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>

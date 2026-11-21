@@ -248,3 +248,17 @@
     })(last);
   }
 })();
+
+/* ледяные осколки на карточках */
+(function(){
+  const sel='.reg-card,.category-card,.master-card,.info-card,.rules-item,.detail-item,.contact-item,.info-box';
+  const kinds=['a','b','c'];
+  document.querySelectorAll(sel).forEach(function(el,i){
+    if(getComputedStyle(el).position==='static') el.style.position='relative';
+    function add(cls,k){var s=document.createElement('i');s.className='shard '+cls+' '+k;s.setAttribute('aria-hidden','true');el.appendChild(s)}
+    add(i%2?'r':'l',kinds[i%3]);
+    if(i%3===0) add(i%2?'l':'r',kinds[(i+1)%3]);
+    if(i%4===1) add('t',kinds[(i+2)%3]);
+  });
+  document.documentElement.classList.add('js-shards');
+})();
