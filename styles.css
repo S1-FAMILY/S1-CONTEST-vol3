@@ -651,3 +651,27 @@ header::after{content:"";}
 
 .master-img.ph{display:flex;align-items:center;justify-content:center;min-height:220px;background:radial-gradient(circle at 50% 40%,rgba(160,210,255,.22),rgba(10,24,42,.6))}
 .master-img.ph svg{width:96px;height:96px;opacity:.85}
+
+/* ---- v8: минимализм — без осколков, лёд и снег тише ---- */
+.shard{display:none!important}
+.info-card::before,.detail-item::before,.category-card::before,.reg-card::before,.ticket-card::before,.criteria-box::before,.contact-item::before,.info-box::before,.rules-item::before,.master-card::before,.pricing-master::before,.booking-terms::before,.fees-table-container::before,.masters-intro::before,.warning-box::before,.criterion::before,.judge-card::before{opacity:.42!important;top:-20px!important;height:30px!important;filter:brightness(1.7) contrast(.9)!important}
+.info-card::after,.category-card::after,.reg-card::after,.ticket-card::after,.criteria-box::after,.rules-item::after,.master-card::after,.pricing-master::after,.booking-terms::after,.fees-table-container::after,.judge-card::after{opacity:.34!important;height:44px!important;filter:none!important}
+header::after{opacity:.35!important}
+.drip,.drips{opacity:.45}
+.drift{height:110px}
+footer .drift{top:-70px;height:110px}
+.drift .d-back{opacity:.22}
+.drift .d-front{opacity:.42}
+/* судьи */
+.judges-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:44px 26px;margin-bottom:40px}
+.judge-card{position:relative;border-radius:20px;background:linear-gradient(180deg,rgba(16,34,54,.78),rgba(7,16,28,.82));border:1px solid var(--line);text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.45)}
+.judge-card .master-img{border-radius:20px 20px 0 0;overflow:hidden}
+.judge-card .master-info{padding:18px 16px 24px}
+.judge-card h3{font-size:1.1rem;letter-spacing:.08em;margin-bottom:8px}
+.judge-card p{color:var(--muted);font-size:.9rem}
+.footer-docs{margin-bottom:8px}.footer-docs a{color:var(--ice-2);text-decoration:underline;text-underline-offset:3px;margin:0 8px;white-space:nowrap}
+.fld select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#9ec7e8 50%),linear-gradient(135deg,#9ec7e8 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:38px}
+.fld select option{background:#0a1626;color:#fff}
+.fld select:focus{border-color:var(--ice-3);box-shadow:0 0 0 3px rgba(127,180,222,.2)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
